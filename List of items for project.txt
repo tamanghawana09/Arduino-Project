@@ -1,0 +1,7 @@
+--> 1000mAh Battery
+--> Ultrasonic sensor
+--> Bluetooth
+--> Arduino
+--> build in gyroscope
+--> quadcopter designing
+--> 2MP 720p HQ videocamera
