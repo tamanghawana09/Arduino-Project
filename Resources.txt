@@ -4,3 +4,4 @@ https://www.youtube.com/watch?v=zLdw0reI86o&list=LL&index=3&t=136s
 https://www.instructables.com/DIY-Follow-Me-Drone-With-Camera-Arduino-Based/
 https://www.sciencebuddies.org/science-fair-projects/project-ideas/Robotics_p038/robotics/drone-programming-arduino
 https://dojofordrones.com/arduino-drone/
+https://www.instructables.com/Arduino-Drone-With-GPS/
