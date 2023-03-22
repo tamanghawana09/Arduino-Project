@@ -1,15 +1,12 @@
 
-
-
---> 1000mAh Battery
---> Ultrasonic sensor ✌
---> Bluetooth ✌
---> Arduino ✌
---> build in gyroscope ✌
---> quadcopter designing
---> 2MP 720p HQ videocamera
---> Serial GPS Module (Optional)[ Rakhna mann lage rakhne natra not important ] ✌
---> Motors
---> Motor driver
---> propellers
---> frame
+--> Arduino Uno (x1)   ✌
+--> Gear Motor (x4)
+--> Robot Wheel (x4)
+--> Motor Driver(L293D) (x1)
+--> Ultrasonic Sensor x1    ✌
+--> Bluetooth module x1
+--> Li-ion Battery x2
+--> Li-ion Battery holder x1
+--> Jumper Wires    ✌
+--> Dot board x1
+--> Switch x1
