@@ -3,7 +3,7 @@
 --> Gear Motor (x4)
 --> Robot Wheel (x4)
 --> Motor Driver(L293D) (x1)
---> Ultrasonic Sensor x1    ✌
+--> Ultrasonic Sensor x2    ✌
 --> Bluetooth module x1
 --> Li-ion Battery x2
 --> Li-ion Battery holder x1
