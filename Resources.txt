@@ -1,9 +1,2 @@
-https://youtu.be/OWaXIK9sHeE
-https://www.youtube.com/watch?v=k0GBPQ5MfEA
-https://www.youtube.com/watch?v=zLdw0reI86o&list=LL&index=3&t=136s
-https://www.instructables.com/DIY-Follow-Me-Drone-With-Camera-Arduino-Based/
-https://www.sciencebuddies.org/science-fair-projects/project-ideas/Robotics_p038/robotics/drone-programming-arduino
-https://dojofordrones.com/arduino-drone/
-https://www.instructables.com/Arduino-Drone-With-GPS/
-https://www.instructables.com/How-to-Build-a-Rc-Drone-and-the-Transmitter-Using-/
-https://electronicslovers.com/2018/11/build-arduino-quadcopter-with-complete-source-code-and-circuit-diagram.html
+https://www.youtube.com/watch?v=yAV5aZ0unag&t=192s
+https://www.youtube.com/watch?v=aE_J7B-O4VQ&t=58s
