@@ -32,28 +32,28 @@ void setup() {
   M4.setSpeed(Speed);
 }
 void loop() {
-  Obstacle();
+  //Obstacle();
   //Bluetoothcontrol();
-  //voicecontrol();
+  voicecontrol();
 }
 void Bluetoothcontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
     Serial.println(value);
   }
-  if (value == 'F') {
+  if (value == 'U') {
     forward();
-  } else if (value == 'B') {
+  } else if (value == 'D') {
     backward();
-  } else if (value == 'L') {
-    left();
   } else if (value == 'R') {
+    left();
+  } else if (value == 'L') {
     right();
   } else if (value == 'S') {
     Stop();
   }
 }
-void Obstacle() {
+/*void Obstacle() {
   distance = ultrasonic();
   if (distance <= 12) {
     Stop();
@@ -79,7 +79,7 @@ void Obstacle() {
   } else {
     forward();
   }
-}
+}*/
 void voicecontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
