@@ -33,26 +33,35 @@ void setup() {
 }
 void loop() {
   //Obstacle();
-  //Bluetoothcontrol();
-  voicecontrol();
+  Bluetoothcontrol();
+  //voicecontrol();
 }
 void Bluetoothcontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
     Serial.println(value);
   }
-  if (value == 'F') {
+ if (value == 'F') {
     forward();
   } else if (value == 'B') {
     backward();
   } else if (value == 'R') {
     left();
+  } else if (value == 'I'){
+    forward_left();
+  } else if (value == 'H'){
+    backward_left();
   } else if (value == 'L') {
     right();
-  } else if (value == 'S') {
+  } else if (value == 'G'){
+    forward_right();
+  } else if (value == 'J'){
+    backward_right();
+  }else if (value == 'S') {
     Stop();
   }
 }
+
 void Obstacle() {
   distance = ultrasonic();
   if (distance <= 12) {
@@ -134,18 +143,42 @@ void forward() {
   M4.setSpeed(255);
   M4.run(FORWARD);
 }
-// void forwardleft() {
-//     M1.run(FORWARDLEFT);
-//   M2.run(FORWARDLEFT);
-//   M3.run(FORWARDLEFT);
-//   M4.run(FORWARDLEFT);
-// }
-// void forwardright() {
-//     M1.run(FORWARDRIGHT);
-//   M2.run(FORWARDRIGHT);
-//   M3.run(FORWARDRIGHT);
-//   M4.run(FORWARDRIGHT);
-// }
+void forward_left() {
+  M1.setSpeed(255);
+  M1.run(FORWARD);
+  M2.setSpeed(255);
+  M2.run(FORWARD);
+  M3.setSpeed(255);
+  M3.run(FORWARD);
+  M4.setSpeed(255);
+  M4.run(FORWARD);
+  M1.setSpeed(255);
+  M1.run(FORWARD);
+  M2.setSpeed(255);
+  M2.run(FORWARD);
+  M3.setSpeed(255);
+  M3.run(BACKWARD);
+  M4.setSpeed(255);
+  M4.run(BACKWARD);
+}
+ void forward_right() {
+   M1.setSpeed(255);
+  M1.run(FORWARD);
+  M2.setSpeed(255);
+  M2.run(FORWARD);
+  M3.setSpeed(255);
+  M3.run(FORWARD);
+  M4.setSpeed(255);
+  M4.run(FORWARD);
+  M1.setSpeed(255);
+  M1.run(BACKWARD);
+  M2.setSpeed(255);
+  M2.run(BACKWARD);
+  M3.setSpeed(255);
+  M3.run(FORWARD);
+  M4.setSpeed(255);
+  M4.run(FORWARD);
+ }
 void backward() {
   M1.setSpeed(255);
   M1.run(BACKWARD);
@@ -156,18 +189,42 @@ void backward() {
   M4.setSpeed(255);
   M4.run(BACKWARD);
 }
-// void backwardright() {
-//   M1.run(BACKWARDRIGHT);
-//   M2.run(BACKWARDRIGHT);
-//   M3.run(BACKWARDRIGHT);
-//   M4.run(BACKWARDRIGHT);
-// }
-// void backwardleft() {
-//   M1.run(BACKWARDLEFT);
-//   M2.run(BACKWARDLEFT);
-//   M3.run(BACKWARDLEFT);
-//   M4.run(BACKWARDLEFT);
-// }
+void backward_right() {
+  M1.setSpeed(255);
+  M1.run(BACKWARD);
+  M2.setSpeed(255);
+  M2.run(BACKWARD);
+  M3.setSpeed(255);
+  M3.run(BACKWARD);
+  M4.setSpeed(255);
+  M4.run(BACKWARD);
+  M1.setSpeed(255);
+  M1.run(BACKWARD);
+  M2.setSpeed(255);
+  M2.run(BACKWARD);
+  M3.setSpeed(255);
+  M3.run(FORWARD);
+  M4.setSpeed(255);
+  M4.run(FORWARD);
+}
+void backward_left() {
+  M1.setSpeed(255);
+  M1.run(BACKWARD);
+  M2.setSpeed(255);
+  M2.run(BACKWARD);
+  M3.setSpeed(255);
+  M3.run(BACKWARD);
+  M4.setSpeed(255);
+  M4.run(BACKWARD);
+  M1.setSpeed(255);
+  M1.run(FORWARD);
+  M2.setSpeed(255);
+  M2.run(FORWARD);
+  M3.setSpeed(255);
+  M3.run(BACKWARD);
+  M4.setSpeed(255);
+  M4.run(BACKWARD);
+}
 void right() {
   M1.setSpeed(255);
   M1.run(BACKWARD);
