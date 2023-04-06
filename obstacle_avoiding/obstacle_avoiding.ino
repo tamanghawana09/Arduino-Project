@@ -33,8 +33,8 @@ void setup() {
 }
 void loop() {
   //Obstacle();
-  Bluetoothcontrol();
-  //voicecontrol();
+  //Bluetoothcontrol();
+  voicecontrol();
 }
 void Bluetoothcontrol() {
   if (Serial.available() > 0) {
@@ -117,7 +117,48 @@ void voicecontrol() {
       } else if (R < 50) {
         Stop();
       }
-    } else if (value == '*') {
+      }else if(value == '>>'){
+      R = rightsee();
+      servo.write(spoint);
+      if (R >= 10 ) {
+        right();
+        delay(500);
+        forward();
+      } else if (R < 50) {
+        forward();
+    }
+      }
+    else if (value == '<<') {
+      L = leftsee();
+      servo.write(spoint);
+      if (L >= 10 ) {
+        left();
+        delay(500);
+        forward();
+      } else if (L < 50) {
+        forward();
+      }
+    }else if(value == '->'){
+     L = leftsee();
+      servo.write(spoint);
+      if (L >= 10 ) {
+        left();
+        delay(500);
+        backward();
+      } else if (L < 50) {
+        backward();
+    }
+    }else if(value == '-<'){
+       R = rightsee();
+      servo.write(spoint);
+      if (R >= 10 ) {
+        right();
+        delay(500);
+        backward();
+      } else if (R < 50) {
+        backward();
+    } 
+    }else if (value == '*') {
       Stop();
     }
   }
