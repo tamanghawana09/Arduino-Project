@@ -1,5 +1,4 @@
 /*obstacle avoiding, Bluetooth control, voice control robot car.
-   https://srituhobby.com
 */
 #include <Servo.h>
 #include <AFMotor.h>
@@ -32,11 +31,11 @@ void setup() {
   M4.setSpeed(Speed);
 }
 void loop() {
-  Obstacle();
-  //Bluetoothcontrol();
+  //Obstacle();
+  Bluetoothcontrol();
   //voicecontrol();
 }
-/*void Bluetoothcontrol() {
+void Bluetoothcontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
     Serial.println(value);
@@ -60,9 +59,9 @@ void loop() {
   }else if (value == 'S') {
     Stop();
   }
-}*/
+}
 
-void Obstacle() {
+/*void Obstacle() {
   distance = ultrasonic();
   if (distance <= 12) {
     Stop();
@@ -88,7 +87,7 @@ void Obstacle() {
   } else {
     forward();
   }
-}
+}*/
 /*void voicecontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
