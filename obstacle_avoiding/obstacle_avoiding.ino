@@ -32,11 +32,11 @@ void setup() {
   M4.setSpeed(Speed);
 }
 void loop() {
-  //Obstacle();
+  Obstacle();
   //Bluetoothcontrol();
-  voicecontrol();
+  //voicecontrol();
 }
-void Bluetoothcontrol() {
+/*void Bluetoothcontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
     Serial.println(value);
@@ -60,7 +60,7 @@ void Bluetoothcontrol() {
   }else if (value == 'S') {
     Stop();
   }
-}
+}*/
 
 void Obstacle() {
   distance = ultrasonic();
@@ -89,7 +89,7 @@ void Obstacle() {
     forward();
   }
 }
-void voicecontrol() {
+/*void voicecontrol() {
   if (Serial.available() > 0) {
     value = Serial.read();
     Serial.println(value);
@@ -162,7 +162,7 @@ void voicecontrol() {
       Stop();
     }
   }
-}
+}*/
 // Ultrasonic sensor distance reading function
 int ultrasonic() {
   digitalWrite(Trig, LOW);
